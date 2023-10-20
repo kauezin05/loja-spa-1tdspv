@@ -1,4 +1,19 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
- */
+
+@layer components {
+    .menu{
+        & li{
+            @apply inline;
+        
+            & a{
+                @apply inline-block md:p-3 hover:bg-gray-50 hover:text-black transition-all duration-300 ease-in-out lg: p-6 sm:p-1;
+            }
+        }
+    }
+
+    .Rodape{
+        @apply font-extrabold text-2xl text-white fixed text bg-center bg-slate-800 p-4 bottom-0 w-full
+    }
+}

@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Rodape() {
   return (
     <>
-        <footer>
+        <footer className="Rodape">
             <h1>CRIADO POR KAUE</h1>
 
         </footer>
