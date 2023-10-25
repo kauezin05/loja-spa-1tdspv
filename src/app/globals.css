@@ -1,19 +1,52 @@
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
 
+ 
+
 @layer components {
-    .menu{
+
+    .card-user{
+
+        @apply flex flex-wrap;
+
         & li{
-            @apply inline;
-        
-            & a{
-                @apply inline-block md:p-3 hover:bg-gray-50 hover:text-black transition-all duration-300 ease-in-out lg: p-6 sm:p-1;
+            @apply bg-purple-400 p-5 m-5 w-40 text-center font-bold;
+
+            & img{
+                @apply block m-auto;
             }
+
+
         }
     }
 
-    .Rodape{
-        @apply font-extrabold text-2xl text-white fixed text bg-center bg-slate-800 p-4 bottom-0 w-full
+    .menu {
+
+        & li{
+
+            @apply inline;
+
+ 
+
+            & a{
+
+                @apply inline-block md:p-2 lg:p-3 sm:p-1 font-extrabold hover:bg-white hover:text-slate-800 transition-all duration-300 ease-in-out;
+
+            }
+
+        }
+
     }
+
+   
+
+    .rodape {
+
+        @apply font-extrabold text-2xl text-white bg-slate-800 p-4 text-center fixed bottom-0 w-full;
+
+    }
+
 }

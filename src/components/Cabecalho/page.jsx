@@ -12,6 +12,8 @@ export default function cabelho() {
                   <li><Link href="/produtos/tenis">Tenis</Link></li>
                   <li><Link href="/produtos/meias">Meias</Link></li>
                   <li><Link href="/produtos/chinelos">Chinelos</Link></li> 
+                  <li><Link href="/produtos/fazenda/loja/laticinios ">Queijos</Link></li>
+                  <li><Link href="/user-pages ">Users</Link></li>
               </ul>
            </nav>
         </header>
