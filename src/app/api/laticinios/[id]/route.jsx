@@ -1,8 +1,5 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
-    
-
     const queijos = [
 
         {
@@ -88,12 +85,12 @@ export async function GET() {
      
     
       ];
-
-      return NextResponse.json(queijos);
-
-
-
-
-
-
+  export async function GET(request, {params}){
+      const id = params.id;
+      console.log(id);
+      if(id > 0 && id <= queijos.length ){
+        const q = queijos.find((queijo)=>(queijo.id == id));
+        return NextResponse.json(q);
+      }
+      return id == 0 ? NextResponse.json(queijos) : NextResponse.redirect("http://localhost:3000/error");
 }
