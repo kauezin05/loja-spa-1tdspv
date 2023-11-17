@@ -1,24 +1,57 @@
-import Link from 'next/link'
-import React from 'react'
+"use client";
+import Link from "next/link";
+export default function Cabecalho() {
 
-export default function cabelho() {
-  return (
-    <>
-        <header className="bg-slate-800 text-white">
-          <h1 className="text-center text-3x1 font-extrabold">Produtos</h1>
-          <hr className="bg-red-600 border border-red-700"/>
-          <nav className="menu">
-              <ul>
-                  <li><Link href="/produtos/tenis">Tenis</Link></li>
-                  <li><Link href="/produtos/meias">Meias</Link></li>
-                  <li><Link href="/produtos/chinelos">Chinelos</Link></li> 
-                  <li><Link href="/produtos/fazenda/loja/laticinios ">Queijos</Link></li>
-                  <li><Link href="/user-pages ">Users</Link></li>
-              </ul>
-           </nav>
-        </header>
-          
+  if (sessionStorage.getItem("token-user")) {
+    return (
+      
+      <header className="bg-slate-800 text-white">
 
-    </>
-  )
+        <h1 className="text-center text-3xl font-extrabold">PRODUTOS</h1>
+        <hr className="bg-red-600 border border-red-700" />
+        <nav className="menu">
+          <ul>
+            <li>
+              <Link href="/">HOME</Link>
+            </li>
+            <li>
+              <Link href="/login">LOGIN</Link>
+            </li>
+            <li>
+              <Link href="/produtos/meias">MEIA</Link>
+            </li>
+            <li>
+              <Link href="/produtos/chinelos">CHINELO</Link>
+            </li>
+            <li>
+              <Link href="/produtos/tenis">TÊNIS</Link>
+            </li>
+            <li>
+              <Link href="/produtos/fazenda/loja/laticinios">QUEIJOS</Link>
+            </li>
+            <li>
+              <Link href="/user-pages">GIT-USERS</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    );
+  } else {
+    return (
+      <header className="bg-slate-800 text-white">
+        <h1 className="text-center text-3xl font-extrabold">PRODUTOS</h1>
+        <hr className="bg-red-600 border border-red-700" />
+        <nav className="menu">
+          <ul>
+            <li>
+              <Link href="/">HOME</Link>
+            </li>
+            <li>
+              <Link href="/login">LOGIN</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    );
+  }
 }

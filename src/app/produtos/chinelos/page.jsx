@@ -1,20 +1,13 @@
-import Link from 'next/link'
-import React from 'react'
-import Image from 'next/image'
+import Link from "next/link";
 
-export default function chinelos() {
+export default function Chinelo({props}) {
+  
   return (
-    <>
     <div>
-        <h1>CHINELOS</h1>
-        <Image src="/Chinelo.png" width={500} height={500} alt='Imagem de chinelo'></Image>
-    </div>
-
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi repudiandae, nesciunt facere quae ducimus ea reiciendis temporibus dicta similique in incidunt labore obcaecati assumenda, illum ipsam consequuntur. Praesentium, totam. Eos!</p>
+        <h1>Chinelo</h1>
+        <p><strong>Descrição: </strong></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dicta ipsa neque deserunt pariatur? Impedit porro necessitatibus, quia consequatur expedita itaque est facere omnis quod in numquam, ullam illo odit!</p>
         <p><Link href="/">Voltar...</Link></p>
-        
     </div>
-    </>
   )
 }
